@@ -1,11 +1,9 @@
 <html>
-
 <head>
   <title>Calendariozin</title>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
 </head>
-
 <body>
   <script src="https://code.jquery.com/jquery-1.12.3.js" integrity="sha256-1XMpEtA4eKXNNpXcJ1pmMPs8JV+nwLdEqwiJeCQEkyc=" crossorigin="anonymous"></script>
   <div id=calendario>
@@ -14,21 +12,16 @@
         <button id=mes></button>
         <button class=next><i class="bi bi-arrow-right-circle-fill"></i></button>
     </div>
-    <div id=conteudo>
-    
-    </div>
+    <div id=conteudo></div>
   </div>
-  
 </body>
-
-
+  
 <script>
   let d = new Date();
   const meses = ["Janeiro", "Fevereiro", "Março", "Abril", "Maio", "Julho","Julho", "Agosto", "Setembro", "Outubro", "Novembro", "Dezembro"];
   const diasSemana = ["D","S","T","Q","Q","S","S"];
   
   function calendar(d){
-    
     var ultimodia = new Date(d.getFullYear(), d.getMonth() +1, 0);
     var primeirodia = new Date(d.getFullYear(), d.getMonth(),1);
     for (let c = 0; c <=6; c++){
@@ -58,7 +51,6 @@
       d = new Date( d.getFullYear() , d.getMonth() - 1 , 1 ) ; 
       $("#conteudo").html(" ");
       calendar( d );
-
       $("#conteudo").addClass('right');
       setTimeout(function(){
         $('#conteudo').removeClass('right');
@@ -137,7 +129,5 @@
     .bolinha:hover{
       border: 1px solid rgba(0, 0, 0, .5);
     }
-
 </style>
-
 </html>
